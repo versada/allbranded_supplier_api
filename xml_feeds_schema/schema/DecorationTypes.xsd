@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="Common.xsd"/>
+
+  <xs:element name="DecorationTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DecorationType" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Title" type="T_NotNullString"/>
+              <xs:element name="FullColor" type="xs:boolean"/>
+              <xs:element name="Option" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="LogoSizeCM2" type="xs:positiveInteger" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Specify logo size limit here for which the Pricing below applies.
+                          If logo size is irrelevant do not include this element.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Pricing" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Currency" type="T_Currency"/>
+                          <xs:element name="FixedSetupCost" type="xs:decimal" minOccurs="0"/>
+                          <xs:element name="VariableSetupCost" type="xs:decimal" minOccurs="0"/>
+                          <xs:element name="ScalePrice" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QtyLowerBound" type="xs:positiveInteger">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      This is the inclusive ordered quantity from which the price in UnitPrice element applies.
+                                      For example, if there are three ScalePrice elements with QtyLowerbound in {1, 100, 500}
+                                      the one with 100 will be used if customer orders 150 items to be decorated,
+                                      as 150 is more than 100 and less than 500.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="UnitPrice" type="xs:decimal"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="NumberOfColors" type="xs:positiveInteger" use="required">
+                          <xs:annotation>
+                            <xs:documentation>
+                              If decoration is full color, NumberOfColors should be set to 1.
+                            </xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="DecoTypeID" type="T_NotNullString" use="required">
+              <xs:annotation>
+                <xs:documentation>
+                  Unique ID of this decoration.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+
+          <xs:unique name="UniqueLogoSizeCM2">
+            <xs:selector xpath="Option"/>
+            <xs:field xpath="LogoSizeCM2"/>
+          </xs:unique>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:unique name="UniqueDecoType">
+      <xs:selector xpath="DecorationType"/>
+      <xs:field xpath="@DecoTypeID"/>
+    </xs:unique>
+  </xs:element>
+</xs:schema>

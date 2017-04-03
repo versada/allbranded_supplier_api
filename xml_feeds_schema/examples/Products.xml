@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Products>
+  <Product>
+    <SKU>900002</SKU>
+    <Title>Drinking Bottle</Title>
+    <Brand>Generic</Brand>
+    <Description>Single walled bottle with twist-on lid. Volume capacity is 350ml.</Description>
+    <Keywords>plastic bottle, drinking bottle, bottles, bottle</Keywords>
+    <CountryOfOrigin>CH</CountryOfOrigin>
+    <QuantityPerCarton>40</QuantityPerCarton>
+    <Material>Plastic</Material>
+    <Durability>12 months</Durability>
+    <WeightGR>250</WeightGR>
+    <WidthCM>8</WidthCM>
+    <HeightCM>16</HeightCM>
+
+    <Category>
+      <Title>Drinkware / Bottle</Title>
+      <Code>18 / 185</Code>
+    </Category>
+
+    <Variants>
+      <Variant>
+        <SKU>90002001</SKU>
+
+        <PlainImageURL>http://...</PlainImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+
+        <Colors>
+          <!-- Base Color -->
+          <Color>
+            <Title>Red</Title>
+            <HexCode>EF3340</HexCode>
+            <PantoneCode>Red 032 C</PantoneCode>
+
+          </Color>
+
+          <!-- Lid Color -->
+          <Color>
+            <Title>Black</Title>
+            <HexCode>2D2926</HexCode>
+            <PantoneCode>Black C</PantoneCode>
+          </Color>
+        </Colors>
+
+        <Prints>
+          <Print DecoTypeID="LASER">
+            <MinDecoQty>40</MinDecoQty>
+            <MaxNrOfColors>2</MaxNrOfColors>
+            <Express>true</Express>
+            <ExpressSurcharge Type="absolute">25.00</ExpressSurcharge>
+            <Position>
+              <Title>Front</Title>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+            <Position>
+              <Title>Back</Title>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+            <Position>
+              <Title>Lid</Title>
+              <WidthMM>10</WidthMM>
+              <HeightMM>10</HeightMM>
+            </Position>
+          </Print>
+          <Print DecoTypeID="DIGITAL">
+            <MinDecoQty>40</MinDecoQty>
+            <Express>false</Express>
+            <Position>
+              <Title>Front</Title>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+            <Position>
+              <Title>Back</Title>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+            <Position>
+              <Title>Lid</Title>
+              <WidthMM>10</WidthMM>
+              <HeightMM>10</HeightMM>
+            </Position>
+          </Print>
+        </Prints>
+
+        <Pricing>
+          <Currency>EUR</Currency>
+          <ScalePrice>
+            <QtyLowerBound>1</QtyLowerBound>
+            <UnitNetPrice>1.99</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>50</QtyLowerBound>
+            <UnitNetPrice>1.95</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>250</QtyLowerBound>
+            <UnitNetPrice>1.90</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>500</QtyLowerBound>
+            <UnitNetPrice>1.89</UnitNetPrice>
+          </ScalePrice>
+        </Pricing>
+      </Variant>
+
+      <Variant>
+        <SKU>90002002</SKU>
+
+        <PlainImageURL>http://...</PlainImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+
+        <Colors>
+          <!-- Base Color -->
+          <Color>
+            <Title>Green</Title>
+            <HexCode>44D62C</HexCode>
+            <PantoneCode>PMS 802 C</PantoneCode>
+          </Color>
+
+          <!-- Lid Color -->
+          <Color>
+            <Title>Black</Title>
+            <HexCode>2D2926</HexCode>
+            <PantoneCode>Black C</PantoneCode>
+          </Color>
+        </Colors>
+
+        <Prints>
+          <Print DecoTypeID="LASER">
+            <MinDecoQty>40</MinDecoQty>
+            <MaxNrOfColors>2</MaxNrOfColors>
+            <Express>false</Express>
+            <Position>
+              <Title>Vorderseite</Title>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+          </Print>
+          <Print DecoTypeID="DIGITAL">
+            <MinDecoQty>40</MinDecoQty>
+            <Express>false</Express>
+            <Position>
+              <Title>Vorderseite</Title>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+          </Print>
+        </Prints>
+
+        <Pricing>
+          <Currency>EUR</Currency>
+          <ScalePrice>
+            <QtyLowerBound>1</QtyLowerBound>
+            <UnitNetPrice>1.99</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>50</QtyLowerBound>
+            <UnitNetPrice>1.95</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>250</QtyLowerBound>
+            <UnitNetPrice>1.90</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>500</QtyLowerBound>
+            <UnitNetPrice>1.89</UnitNetPrice>
+          </ScalePrice>
+        </Pricing>
+      </Variant>
+
+    </Variants>
+  </Product>
+</Products>

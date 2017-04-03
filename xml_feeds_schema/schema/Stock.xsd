@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="Common.xsd"/>
+
+  <xs:element name="Stock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Item" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="SKU" type="T_NotNullString" use="required"/>
+            <xs:attribute name="AvailableQty" type="xs:integer" use="required"/>
+            <xs:attribute name="ForecastQty" type="xs:integer" use="optional">
+              <xs:annotation>
+                <xs:documentation>
+                  Total quantity expected to be in stock at the forecast date.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="ForecastDate" type="xs:date" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:unique name="UniqueSKU">
+      <xs:selector xpath="Item"/>
+      <xs:field xpath="@SKU"/>
+    </xs:unique>
+  </xs:element>
+</xs:schema>

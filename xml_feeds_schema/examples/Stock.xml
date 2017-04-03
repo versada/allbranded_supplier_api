@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Stock>
+  <Item SKU="90002001" AvailableQty="2500" ForecastQty="3500" ForecastDate="2017-05-25"/>
+  <Item SKU="90002002" AvailableQty="2700"/>
+  <Item SKU="90002003" AvailableQty="0"/>
+</Stock>

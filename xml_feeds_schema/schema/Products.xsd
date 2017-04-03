@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="Common.xsd"/>
+
+  <xs:complexType name="T_ProductVariant">
+    <xs:sequence>
+      <xs:element name="SKU" type="T_NotNullString"/>
+      <xs:element name="WearableSize" type="T_NotNullString" minOccurs="0"/>
+      <xs:element name="StorageCapacityGB" type="xs:decimal" minOccurs="0"/>
+
+      <xs:element name="PlainImageURL" type="T_NotNullString">
+        <xs:annotation>
+          <xs:documentation>
+            URL to a picture of this variant without any imprints.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DecoImageURL" type="T_NotNullString" maxOccurs="5">
+        <xs:annotation>
+          <xs:documentation>
+            URL to a picture of this variant with some imprint examples.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="Colors" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            This element should contain only colors of this specific product variant.
+            For example "red pen with blue lid" would contain colors "red" and "blue" here.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Color" maxOccurs="4">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Title" type="T_NotNullString"/>
+                  <xs:element name="HexCode" type="T_HexColor"/>
+                  <xs:element name="PantoneCode" type="T_PantoneColor" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="Prints">
+        <xs:annotation>
+          <xs:documentation>
+            Add a new Print element for each type of decoration that can be used to print on this variant.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Print" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MinDecoQty" type="xs:positiveInteger">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Minimal quantity of the product that needs to be ordered for this type of decoration.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="MaxNrOfColors" type="xs:positiveInteger" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Use this if, for example, decoration type linked in DecoTypeID can be printed up to 4 colors,
+                        but on this specific variant you want to enforce a lower limit.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Express" type="xs:boolean" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Should be set to "true" if this decoration can be printed and delivered faster than typical.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ExpressSurcharge" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Specify surcharge here in percentage or absolute amount.
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:decimal">
+                          <xs:attribute name="Type" use="required">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="percent"/>
+                                <xs:enumeration value="absolute"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:attribute>
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Position" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>
+                        This element should be added for every different position this decoration can be printed on.
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Title" type="T_NotNullString">
+                          <xs:annotation>
+                            <xs:documentation>
+                              E.g. Front / Back
+                            </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="WidthMM" type="xs:positiveInteger" minOccurs="0"/>
+                        <xs:element name="HeightMM" type="xs:positiveInteger" minOccurs="0"/>
+                        <xs:element name="DiameterMM" type="xs:positiveInteger" minOccurs="0"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="DecoTypeID" type="T_NotNullString" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      This should contain an identifier string that refers to a decoration type
+                      described in the decoration XML file. (Schema: DecorationTypes.xsd)
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+
+        <xs:unique name="UniquePrintDecoPerProduct">
+          <xs:selector xpath="Print"/>
+          <xs:field xpath="@DecoTypeID"/>
+        </xs:unique>
+      </xs:element>
+
+      <xs:element name="Pricing">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Currency" type="T_Currency"/>
+            <xs:element name="ScalePrice" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="QtyLowerBound" type="xs:positiveInteger">
+                    <xs:annotation>
+                      <xs:documentation>
+                        This is the inclusive ordered quantity from which the price in UnitNetPrice element applies.
+                        For example, if there are three ScalePrice elements with QtyLowerbound in {1, 100, 500}
+                        the one with 100 will be used if customer orders 150 items,
+                        as 150 is more than 100 and less than 500.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="UnitNetPrice" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="T_Product">
+    <xs:sequence>
+      <xs:element name="SKU" type="T_NotNullString"/>
+      <xs:element name="Title" type="T_NotNullString"/>
+      <xs:element name="Brand" type="T_NotNullString"/>
+      <xs:element name="Description" type="xs:string" minOccurs="0"/>
+      <xs:element name="Keywords" type="xs:string" minOccurs="0"/>
+      <xs:element name="BestSeller" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="Clearance" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="CountryOfOrigin" type="T_ISO3166CountryCode"/>
+      <xs:element name="QuantityPerCarton" type="xs:positiveInteger"/>
+
+      <xs:element name="Material" type="T_NotNullString"/>
+      <xs:element name="Durability" type="xs:string"/>
+      <xs:element name="WeightGR" type="xs:positiveInteger" minOccurs="0"/>
+      <xs:element name="WidthCM" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="HeightCM" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="LengthCM" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="DiameterCM" type="xs:decimal" minOccurs="0"/>
+
+      <xs:element name="Category">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Title" type="T_NotNullString"/>
+            <xs:element name="Code" type="T_NotNullString"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="Gender" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="male"/>
+            <xs:enumeration value="female"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="UpdatedTimestamp" type="xs:positiveInteger" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            If possible this field should contain the timestamp of when any attribute
+            of this product was last updated, including variants, images, prints, pricing.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="Variants">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Variant" type="T_ProductVariant" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Products">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Product" type="T_Product" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:unique name="UniqueSKU">
+      <xs:selector xpath="Product"/>
+      <xs:field xpath="SKU"/>
+    </xs:unique>
+    <xs:unique name="UniqueVariantSKU">
+      <xs:selector xpath="Product/Variants/Variant"/>
+      <xs:field xpath="SKU"/>
+    </xs:unique>
+  </xs:element>
+</xs:schema>
