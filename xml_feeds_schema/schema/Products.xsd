@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:include schemaLocation="Common.xsd"/>
+  <xs:annotation>
+    <xs:documentation>
+      List of products and product variants.
+      If product is discontinued, but there are still some items available
+      set Clearance element to value "true".
+      If, on the other hand, product is discontinued and out of stock
+      remove it from XML file completely and it will be automatically deactivated.
+    </xs:documentation>
+  </xs:annotation>
 
   <xs:complexType name="T_ProductVariant">
     <xs:sequence>
