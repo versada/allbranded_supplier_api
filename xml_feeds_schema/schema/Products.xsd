@@ -14,13 +14,29 @@
   <xs:complexType name="T_ProductVariant">
     <xs:sequence>
       <xs:element name="SKU" type="T_NotNullString"/>
-      <xs:element name="WearableSize" type="T_NotNullString" minOccurs="0"/>
+      <xs:element name="WearableSize" type="T_NotNullString" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Size for clothing items. Typically: L, XL, XXL, etc.
+            This element should contain only the size for the specific variant. E.g. XXL
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="StorageCapacityGB" type="xs:decimal" minOccurs="0"/>
 
       <xs:element name="PlainImageURL" type="T_NotNullString">
         <xs:annotation>
           <xs:documentation>
             URL to a picture of this variant without any imprints.
+
+            Description below applies to this element and to DecoImageURL as well:
+            If "ETag" is specified in HTTP response headers and it hasn't changed
+            since last sync the image download will be skipped (only headers will be fetched),
+            thus saving resources on supplier's server and speeding up the sync.
+
+            The images will be used for Google shopping.
+            Therefore they should match the requirements specified in their documentation:
+            https://support.google.com/merchants/answer/6324350
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -189,7 +205,7 @@
       <xs:element name="QuantityPerCarton" type="xs:positiveInteger"/>
 
       <xs:element name="Material" type="T_NotNullString"/>
-      <xs:element name="Durability" type="xs:string"/>
+      <xs:element name="Durability" type="xs:string" minOccurs="0"/>
       <xs:element name="WeightGR" type="xs:positiveInteger" minOccurs="0"/>
       <xs:element name="WidthCM" type="xs:decimal" minOccurs="0"/>
       <xs:element name="HeightCM" type="xs:decimal" minOccurs="0"/>
@@ -199,8 +215,22 @@
       <xs:element name="Category">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="Title" type="T_NotNullString"/>
-            <xs:element name="Code" type="T_NotNullString"/>
+            <xs:element name="Title" type="T_NotNullString">
+              <xs:annotation>
+                <xs:documentation>
+                  Category title in human-readable format.
+                  Typically separated by slash symbol (/) for each level.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Code" type="T_NotNullString">
+              <xs:annotation>
+                <xs:documentation>
+                  Code is used to match supplier categories with internal ones at Allbranded.
+                  It should never change.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
