@@ -239,7 +239,6 @@
       <xs:element name="CountryOfOrigin" type="T_ISO3166CountryCode"/>
       <xs:element name="QuantityPerCarton" type="xs:positiveInteger"/>
 
-      <xs:element name="Durability" type="xs:string" minOccurs="0"/>
       <xs:element name="WeightGR" type="xs:positiveInteger" minOccurs="0"/>
       <xs:element name="WidthCM" type="xs:decimal" minOccurs="0"/>
       <xs:element name="HeightCM" type="xs:decimal" minOccurs="0"/>
@@ -255,6 +254,7 @@
                   <xs:element name="Title" type="T_NotNullString"/>
                   <xs:element name="Description" type="xs:string" minOccurs="0"/>
                   <xs:element name="Keywords" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Durability" type="xs:string" minOccurs="0"/>
                   <xs:element name="Material" type="T_NotNullString"/>
                 </xs:sequence>
                 <xs:attribute name="Lang" type="T_ISO639LanguageCode" use="required"/>
