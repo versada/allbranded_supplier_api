@@ -2,17 +2,22 @@
 <Products>
   <Product>
     <SKU>900002</SKU>
-    <Title>Drinking Bottle</Title>
     <Brand>Generic</Brand>
-    <Description>Single walled bottle with twist-on lid. Volume capacity is 350ml.</Description>
-    <Keywords>plastic bottle, drinking bottle, bottles, bottle</Keywords>
     <CountryOfOrigin>CH</CountryOfOrigin>
     <QuantityPerCarton>40</QuantityPerCarton>
-    <Material>Plastic</Material>
     <Durability>12 months</Durability>
     <WeightGR>250</WeightGR>
     <WidthCM>8</WidthCM>
     <HeightCM>16</HeightCM>
+
+    <Translatable>
+      <Translation Lang="en">
+        <Title>Drinking Bottle</Title>
+        <Description>Single walled bottle with twist-on lid. Volume capacity is 350ml.</Description>
+        <Keywords>plastic bottle, drinking bottle, bottles, bottle</Keywords>
+        <Material>Plastic</Material>
+      </Translation>
+    </Translatable>
 
     <Category>
       <Title>Drinkware / Bottle</Title>
@@ -30,7 +35,11 @@
         <Colors>
           <!-- Base Color -->
           <Color>
-            <Title>Red</Title>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Red</Title>
+              </Translation>
+            </Translatable>
             <HexCode>EF3340</HexCode>
             <PantoneCode>Red 032 C</PantoneCode>
 
@@ -38,7 +47,11 @@
 
           <!-- Lid Color -->
           <Color>
-            <Title>Black</Title>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Black</Title>
+              </Translation>
+            </Translatable>
             <HexCode>2D2926</HexCode>
             <PantoneCode>Black C</PantoneCode>
           </Color>
@@ -51,17 +64,29 @@
             <Express>true</Express>
             <ExpressSurcharge Type="absolute">25.00</ExpressSurcharge>
             <Position>
-              <Title>Front</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
             <Position>
-              <Title>Back</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Back</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
             <Position>
-              <Title>Lid</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Lid</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>10</WidthMM>
               <HeightMM>10</HeightMM>
             </Position>
@@ -70,17 +95,29 @@
             <MinDecoQty>40</MinDecoQty>
             <Express>false</Express>
             <Position>
-              <Title>Front</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
             <Position>
-              <Title>Back</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Back</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
             <Position>
-              <Title>Lid</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Lid</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>10</WidthMM>
               <HeightMM>10</HeightMM>
             </Position>
@@ -118,14 +155,22 @@
         <Colors>
           <!-- Base Color -->
           <Color>
-            <Title>Green</Title>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Green</Title>
+              </Translation>
+            </Translatable>
             <HexCode>44D62C</HexCode>
             <PantoneCode>PMS 802 C</PantoneCode>
           </Color>
 
           <!-- Lid Color -->
           <Color>
-            <Title>Black</Title>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Black</Title>
+              </Translation>
+            </Translatable>
             <HexCode>2D2926</HexCode>
             <PantoneCode>Black C</PantoneCode>
           </Color>
@@ -137,7 +182,14 @@
             <MaxNrOfColors>2</MaxNrOfColors>
             <Express>false</Express>
             <Position>
-              <Title>Vorderseite</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+                <Translation Lang="de">
+                  <Title>Vonderseite</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
@@ -146,7 +198,14 @@
             <MinDecoQty>40</MinDecoQty>
             <Express>false</Express>
             <Position>
-              <Title>Vorderseite</Title>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+                <Translation Lang="de">
+                  <Title>Vonderseite</Title>
+                </Translation>
+              </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>

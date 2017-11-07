@@ -60,7 +60,26 @@
             <xs:element name="Color" maxOccurs="4">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="Title" type="T_NotNullString"/>
+                  <xs:element name="Translatable">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Translation" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Title" type="T_NotNullString"/>
+                            </xs:sequence>
+                            <xs:attribute name="Lang" type="T_ISO639LanguageCode" use="required"/>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+
+                    <xs:unique name="UniqueColorTranslationLang">
+                      <xs:selector xpath="Translation"/>
+                      <xs:field xpath="@Lang"/>
+                    </xs:unique>
+                  </xs:element>
+
                   <xs:element name="HexCode" type="T_HexColor"/>
                   <xs:element name="PantoneCode" type="T_PantoneColor" minOccurs="0"/>
                 </xs:sequence>
@@ -132,13 +151,32 @@
                     </xs:annotation>
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="Title" type="T_NotNullString">
-                          <xs:annotation>
-                            <xs:documentation>
-                              E.g. Front / Back
-                            </xs:documentation>
-                          </xs:annotation>
+                        <xs:element name="Translatable">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Translation" maxOccurs="unbounded">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="Title" type="T_NotNullString">
+                                      <xs:annotation>
+                                        <xs:documentation>
+                                          E.g. Front / Back
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                    </xs:element>
+                                  </xs:sequence>
+                                  <xs:attribute name="Lang" type="T_ISO639LanguageCode" use="required"/>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+
+                          <xs:unique name="UniquePositionTranslationLang">
+                            <xs:selector xpath="Translation"/>
+                            <xs:field xpath="@Lang"/>
+                          </xs:unique>
                         </xs:element>
+
                         <xs:element name="WidthMM" type="xs:positiveInteger" minOccurs="0"/>
                         <xs:element name="HeightMM" type="xs:positiveInteger" minOccurs="0"/>
                         <xs:element name="DiameterMM" type="xs:positiveInteger" minOccurs="0"/>
@@ -195,22 +233,41 @@
   <xs:complexType name="T_Product">
     <xs:sequence>
       <xs:element name="SKU" type="T_NotNullString"/>
-      <xs:element name="Title" type="T_NotNullString"/>
       <xs:element name="Brand" type="T_NotNullString"/>
-      <xs:element name="Description" type="xs:string" minOccurs="0"/>
-      <xs:element name="Keywords" type="xs:string" minOccurs="0"/>
       <xs:element name="BestSeller" type="xs:boolean" minOccurs="0"/>
       <xs:element name="Clearance" type="xs:boolean" minOccurs="0"/>
       <xs:element name="CountryOfOrigin" type="T_ISO3166CountryCode"/>
       <xs:element name="QuantityPerCarton" type="xs:positiveInteger"/>
 
-      <xs:element name="Material" type="T_NotNullString"/>
       <xs:element name="Durability" type="xs:string" minOccurs="0"/>
       <xs:element name="WeightGR" type="xs:positiveInteger" minOccurs="0"/>
       <xs:element name="WidthCM" type="xs:decimal" minOccurs="0"/>
       <xs:element name="HeightCM" type="xs:decimal" minOccurs="0"/>
       <xs:element name="LengthCM" type="xs:decimal" minOccurs="0"/>
       <xs:element name="DiameterCM" type="xs:decimal" minOccurs="0"/>
+
+      <xs:element name="Translatable">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Translation" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Title" type="T_NotNullString"/>
+                  <xs:element name="Description" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Keywords" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Material" type="T_NotNullString"/>
+                </xs:sequence>
+                <xs:attribute name="Lang" type="T_ISO639LanguageCode" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+
+        <xs:unique name="UniqueProductTranslationLang">
+          <xs:selector xpath="Translation"/>
+          <xs:field xpath="@Lang"/>
+        </xs:unique>
+      </xs:element>
 
       <xs:element name="Category">
         <xs:complexType>
