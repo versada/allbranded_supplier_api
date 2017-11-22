@@ -8,7 +8,25 @@
         <xs:element name="DecorationType" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Title" type="T_NotNullString"/>
+              <xs:element name="Translatable">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Translation" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Title" type="T_NotNullString"/>
+                        </xs:sequence>
+                        <xs:attribute name="Lang" type="T_ISO639LanguageCode" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+
+                <xs:unique name="UniqueDecoTranslationLang">
+                  <xs:selector xpath="Translation"/>
+                  <xs:field xpath="@Lang"/>
+                </xs:unique>
+              </xs:element>
               <xs:element name="FullColor" type="xs:boolean"/>
               <xs:element name="Option" minOccurs="1" maxOccurs="unbounded">
                 <xs:complexType>

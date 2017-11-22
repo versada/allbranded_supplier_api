@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <DecorationTypes>
   <DecorationType DecoTypeID="LASER">
-    <Title>Lasergravur</Title>
+    <Translatable>
+      <Translation Lang="en">
+        <Title>Laser</Title>
+      </Translation>
+    </Translatable>
     <FullColor>false</FullColor>
     <Option>
       <LogoSizeCM2>12</LogoSizeCM2>
@@ -111,7 +115,11 @@
     </Option>
   </DecorationType>
   <DecorationType DecoTypeID="DIGITAL">
-    <Title>Digital Print</Title>
+    <Translatable>
+      <Translation Lang="en">
+        <Title>Digital Print</Title>
+      </Translation>
+    </Translatable>
     <FullColor>true</FullColor>
     <Option>
       <Pricing NumberOfColors="1">
