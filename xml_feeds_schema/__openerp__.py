@@ -2,7 +2,7 @@
 # Copyright 2017 Versada UAB
 # License AGPL-3 or later (http://www.gnu.org/licenses/agpl).
 {
-    'name': 'xml_feeds',
+    'name': 'XML Feeds Schema',
     'version': '8.0.1.0.0',
     'author': 'Versada',
     'category': 'Connector',
