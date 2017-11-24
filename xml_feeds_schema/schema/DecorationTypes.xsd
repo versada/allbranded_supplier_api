@@ -31,11 +31,11 @@
               <xs:element name="Option" minOccurs="1" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="LogoSizeCM2" type="xs:positiveInteger" minOccurs="0">
+                    <xs:element name="LogoSizeCM2" type="xs:integer">
                       <xs:annotation>
                         <xs:documentation>
                           Specify logo size limit here for which the Pricing below applies.
-                          If logo size is irrelevant do not include this element.
+                          If logo size is irrelevant set it to 0.
                         </xs:documentation>
                       </xs:annotation>
                     </xs:element>

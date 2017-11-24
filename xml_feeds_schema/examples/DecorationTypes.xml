@@ -122,6 +122,7 @@
     </Translatable>
     <FullColor>true</FullColor>
     <Option>
+      <LogoSizeCM2>0</LogoSizeCM2>
       <Pricing NumberOfColors="1">
         <Currency>EUR</Currency>
         <FixedSetupCost>30.00</FixedSetupCost>
