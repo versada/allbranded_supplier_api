@@ -89,7 +89,7 @@
         </xs:complexType>
       </xs:element>
 
-      <xs:element name="Prints">
+      <xs:element name="Prints" minOccurs="0">
         <xs:annotation>
           <xs:documentation>
             Add a new Print element for each type of decoration that can be used to print on this variant.
