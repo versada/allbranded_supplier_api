@@ -60,7 +60,7 @@
             <MaxNrOfColors>2</MaxNrOfColors>
             <Express>true</Express>
             <ExpressSurcharge Type="absolute">25.00</ExpressSurcharge>
-            <Position>
+            <Position PositionID="FRONT">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Front</Title>
@@ -69,7 +69,7 @@
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
-            <Position>
+            <Position PositionID="BACK">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Back</Title>
@@ -78,7 +78,7 @@
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
-            <Position>
+            <Position PositionID="LID">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Lid</Title>
@@ -91,7 +91,7 @@
           <Print DecoTypeID="DIGITAL">
             <MinDecoQty>40</MinDecoQty>
             <Express>false</Express>
-            <Position>
+            <Position PositionID="FRONT">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Front</Title>
@@ -100,7 +100,7 @@
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
-            <Position>
+            <Position PositionID="BACK">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Back</Title>
@@ -109,7 +109,7 @@
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
             </Position>
-            <Position>
+            <Position PositionID="LID">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Lid</Title>
@@ -176,7 +176,7 @@
             <MinDecoQty>40</MinDecoQty>
             <MaxNrOfColors>2</MaxNrOfColors>
             <Express>false</Express>
-            <Position>
+            <Position PositionID="FRONT">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Front</Title>
@@ -192,7 +192,7 @@
           <Print DecoTypeID="DIGITAL">
             <MinDecoQty>40</MinDecoQty>
             <Express>false</Express>
-            <Position>
+            <Position PositionID="FRONT">
               <Translatable>
                 <Translation Lang="en">
                   <Title>Front</Title>

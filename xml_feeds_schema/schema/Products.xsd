@@ -180,6 +180,13 @@
                         <xs:element name="HeightMM" type="xs:positiveInteger" minOccurs="0"/>
                         <xs:element name="DiameterMM" type="xs:positiveInteger" minOccurs="0"/>
                       </xs:sequence>
+                      <xs:attribute name="PositionID" type="T_NotNullString" use="required">
+                        <xs:annotation>
+                          <xs:documentation>
+                            Unique ID of this position per Print.
+                          </xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
                     </xs:complexType>
                   </xs:element>
                 </xs:sequence>
@@ -192,6 +199,11 @@
                   </xs:annotation>
                 </xs:attribute>
               </xs:complexType>
+
+              <xs:unique name="UniquePrintPositionPerProduct">
+                <xs:selector xpath="Position"/>
+                <xs:field xpath="@PositionID"/>
+              </xs:unique>
             </xs:element>
           </xs:sequence>
         </xs:complexType>
