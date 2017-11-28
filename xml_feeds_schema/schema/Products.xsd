@@ -81,7 +81,6 @@
                   </xs:element>
 
                   <xs:element name="HexCode" type="T_HexColor"/>
-                  <xs:element name="PantoneCode" type="T_PantoneColor" minOccurs="0"/>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>

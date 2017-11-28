@@ -41,8 +41,6 @@
               </Translation>
             </Translatable>
             <HexCode>EF3340</HexCode>
-            <PantoneCode>Red 032 C</PantoneCode>
-
           </Color>
 
           <!-- Lid Color -->
@@ -53,7 +51,6 @@
               </Translation>
             </Translatable>
             <HexCode>2D2926</HexCode>
-            <PantoneCode>Black C</PantoneCode>
           </Color>
         </Colors>
 
@@ -161,7 +158,6 @@
               </Translation>
             </Translatable>
             <HexCode>44D62C</HexCode>
-            <PantoneCode>PMS 802 C</PantoneCode>
           </Color>
 
           <!-- Lid Color -->
@@ -172,7 +168,6 @@
               </Translation>
             </Translatable>
             <HexCode>2D2926</HexCode>
-            <PantoneCode>Black C</PantoneCode>
           </Color>
         </Colors>
 

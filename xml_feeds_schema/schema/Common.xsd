@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:include schemaLocation="Colors.xsd"/>
-
   <xs:simpleType name="T_NotNullString">
     <xs:restriction base="xs:string">
       <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="T_HexColor">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})"/>
     </xs:restriction>
   </xs:simpleType>
 
