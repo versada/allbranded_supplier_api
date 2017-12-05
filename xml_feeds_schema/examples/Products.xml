@@ -6,8 +6,11 @@
     <CountryOfOrigin>CH</CountryOfOrigin>
     <QuantityPerCarton>40</QuantityPerCarton>
     <WeightGR>250</WeightGR>
-    <WidthCM>8</WidthCM>
-    <HeightCM>16</HeightCM>
+
+    <Dimensions>
+      <WidthCM>8</WidthCM>
+      <HeightCM>16</HeightCM>
+    </Dimensions>
 
     <Translatable>
       <Translation Lang="en">

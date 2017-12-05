@@ -124,7 +124,7 @@
                   <xs:element name="ExpressSurcharge" minOccurs="0">
                     <xs:annotation>
                       <xs:documentation>
-                        Specify surcharge here in percentage or absolute amount.
+                        Specify surcharge here in absolute amount.
                       </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -133,7 +133,6 @@
                           <xs:attribute name="Type" use="required">
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
-                                <xs:enumeration value="percent"/>
                                 <xs:enumeration value="absolute"/>
                               </xs:restriction>
                             </xs:simpleType>
@@ -251,10 +250,16 @@
       <xs:element name="QuantityPerCarton" type="xs:positiveInteger"/>
 
       <xs:element name="WeightGR" type="xs:positiveInteger" minOccurs="0"/>
-      <xs:element name="WidthCM" type="xs:decimal" minOccurs="0"/>
-      <xs:element name="HeightCM" type="xs:decimal" minOccurs="0"/>
-      <xs:element name="LengthCM" type="xs:decimal" minOccurs="0"/>
-      <xs:element name="DiameterCM" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="Dimensions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="WidthCM" type="xs:decimal"/>
+            <xs:element name="HeightCM" type="xs:decimal"/>
+            <xs:element name="LengthCM" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="DiameterCM" type="xs:decimal" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
 
       <xs:element name="Translatable">
         <xs:complexType>
