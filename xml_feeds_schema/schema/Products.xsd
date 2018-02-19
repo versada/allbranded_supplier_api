@@ -40,7 +40,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="DecoImageURL" type="T_NotNullString" maxOccurs="5">
+      <xs:element name="DecoImageURL" type="T_NotNullString" minOccurs="0" maxOccurs="5">
         <xs:annotation>
           <xs:documentation>
             URL to a picture of this variant with some imprint examples.
@@ -80,7 +80,13 @@
                     </xs:unique>
                   </xs:element>
 
-                  <xs:element name="HexCode" type="T_HexColor"/>
+                  <xs:element name="HexCode" type="T_HexColor" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>
+                        If omitted we'll try to match your color name to our color palette and use a hexcode from there.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>

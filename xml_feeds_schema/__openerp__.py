@@ -3,7 +3,7 @@
 # License AGPL-3 or later (http://www.gnu.org/licenses/agpl).
 {
     'name': 'XML Feeds Schema',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0.1',
     'author': 'Versada',
     'category': 'Connector',
     'website': 'https://versada.eu',
