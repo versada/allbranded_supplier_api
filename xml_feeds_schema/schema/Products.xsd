@@ -112,14 +112,6 @@
                       </xs:documentation>
                     </xs:annotation>
                   </xs:element>
-                  <xs:element name="MaxNrOfColors" type="xs:positiveInteger" minOccurs="0">
-                    <xs:annotation>
-                      <xs:documentation>
-                        Use this if, for example, decoration type linked in DecoTypeID can be printed up to 4 colors,
-                        but on this specific variant you want to enforce a lower limit.
-                      </xs:documentation>
-                    </xs:annotation>
-                  </xs:element>
                   <xs:element name="Express" type="xs:boolean" minOccurs="0">
                     <xs:annotation>
                       <xs:documentation>
@@ -155,6 +147,15 @@
                     </xs:annotation>
                     <xs:complexType>
                       <xs:sequence>
+                        <xs:element name="MaxNrOfColors" type="xs:positiveInteger" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>
+                              Use this if, for example, decoration type linked in DecoTypeID can be printed up to 4 colors,
+                              but on this specific variant you want to enforce a lower limit.
+                            </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+
                         <xs:element name="Translatable">
                           <xs:complexType>
                             <xs:sequence>

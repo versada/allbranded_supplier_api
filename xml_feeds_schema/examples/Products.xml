@@ -60,10 +60,10 @@
         <Prints>
           <Print DecoTypeID="LASER">
             <MinDecoQty>40</MinDecoQty>
-            <MaxNrOfColors>2</MaxNrOfColors>
             <Express>true</Express>
             <ExpressSurcharge Type="absolute">25.00</ExpressSurcharge>
             <Position PositionID="FRONT">
+              <MaxNrOfColors>2</MaxNrOfColors>
               <Translatable>
                 <Translation Lang="en">
                   <Title>Front</Title>
@@ -177,9 +177,9 @@
         <Prints>
           <Print DecoTypeID="LASER">
             <MinDecoQty>40</MinDecoQty>
-            <MaxNrOfColors>2</MaxNrOfColors>
             <Express>false</Express>
             <Position PositionID="FRONT">
+              <MaxNrOfColors>2</MaxNrOfColors>
               <Translatable>
                 <Translation Lang="en">
                   <Title>Front</Title>
