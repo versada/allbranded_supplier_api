@@ -71,6 +71,7 @@
               </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
             </Position>
             <Position PositionID="BACK">
               <Translatable>
