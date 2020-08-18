@@ -24,7 +24,7 @@
       </xs:element>
       <xs:element name="StorageCapacityGB" type="xs:decimal" minOccurs="0"/>
 
-      <xs:element name="PlainImageURL" type="T_NotNullString">
+      <xs:element name="PlainImageURL" type="T_NotNullString" minOccurs="1" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation>
             URL to a picture of this variant without any imprints.
@@ -185,6 +185,13 @@
                         <xs:element name="WidthMM" type="xs:positiveInteger" minOccurs="0"/>
                         <xs:element name="HeightMM" type="xs:positiveInteger" minOccurs="0"/>
                         <xs:element name="DiameterMM" type="xs:positiveInteger" minOccurs="0"/>
+                        <xs:element name="PrintImageURL" type="T_NotNullString" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>
+                              URL to a picture that displays imprint area for this position.
+                            </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
                       </xs:sequence>
                       <xs:attribute name="PositionID" type="T_NotNullString" use="required">
                         <xs:annotation>
