@@ -32,6 +32,10 @@
         <SKU>90002001</SKU>
 
         <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
         <DecoImageURL>http://...</DecoImageURL>
         <DecoImageURL>http://...</DecoImageURL>
 
@@ -71,6 +75,7 @@
               </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
             </Position>
             <Position PositionID="BACK">
               <Translatable>
@@ -102,6 +107,7 @@
               </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
             </Position>
             <Position PositionID="BACK">
               <Translatable>
@@ -111,6 +117,7 @@
               </Translatable>
               <WidthMM>62</WidthMM>
               <HeightMM>50</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
             </Position>
             <Position PositionID="LID">
               <Translatable>
@@ -120,6 +127,7 @@
               </Translatable>
               <WidthMM>10</WidthMM>
               <HeightMM>10</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
             </Position>
           </Print>
         </Prints>
