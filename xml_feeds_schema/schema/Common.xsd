@@ -20,6 +20,7 @@
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="EUR"/>
+      <xs:enumeration value="GBP"/>
     </xs:restriction>
   </xs:simpleType>
 
