@@ -1,6 +1,6 @@
-=========
+================
 xml_feeds_schema
-=========
+================
 
 Schema and documentation for Allbranded Supplier API.
 
