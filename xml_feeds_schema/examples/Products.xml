@@ -30,6 +30,7 @@
     <Variants>
       <Variant>
         <SKU>90002001</SKU>
+        <EANCode>8713159038611</EANCode>
 
         <PlainImageURL>http://...</PlainImageURL>
         <PlainImageURL>http://...</PlainImageURL>
@@ -155,6 +156,7 @@
 
       <Variant>
         <SKU>90002002</SKU>
+        <EANCode>8713159038612</EANCode>
 
         <PlainImageURL>http://...</PlainImageURL>
         <DecoImageURL>http://...</DecoImageURL>

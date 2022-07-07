@@ -14,6 +14,7 @@
   <xs:complexType name="T_ProductVariant">
     <xs:sequence>
       <xs:element name="SKU" type="T_NotNullString"/>
+      <xs:element name="EANCode" type="T_NotNullString"/>
       <xs:element name="WearableSize" type="T_NotNullString" minOccurs="0">
         <xs:annotation>
           <xs:documentation>
@@ -364,6 +365,10 @@
     <xs:unique name="UniqueVariantSKU">
       <xs:selector xpath="Product/Variants/Variant"/>
       <xs:field xpath="SKU"/>
+    </xs:unique>
+    <xs:unique name="UniqueVariantEANCode">
+      <xs:selector xpath="Product/Variants/Variant"/>
+      <xs:field xpath="EANCode"/>
     </xs:unique>
   </xs:element>
 </xs:schema>
