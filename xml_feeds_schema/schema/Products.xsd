@@ -366,9 +366,5 @@
       <xs:selector xpath="Product/Variants/Variant"/>
       <xs:field xpath="SKU"/>
     </xs:unique>
-    <xs:unique name="UniqueVariantEANCode">
-      <xs:selector xpath="Product/Variants/Variant"/>
-      <xs:field xpath="EANCode"/>
-    </xs:unique>
   </xs:element>
 </xs:schema>
