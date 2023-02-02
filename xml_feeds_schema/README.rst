@@ -10,11 +10,6 @@ Supplier should provide these three endpoints on their server:
 * DecorationTypes.xml
 * Stock.xml
 
-Known issues / Roadmap
-======================
-
-* ...
-
 Credits
 =======
 
