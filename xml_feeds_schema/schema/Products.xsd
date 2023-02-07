@@ -258,6 +258,7 @@
   <xs:complexType name="T_Product">
     <xs:sequence>
       <xs:element name="SKU" type="T_NotNullString"/>
+      <xs:element name="IntrastatCommodityCode" type="xs:string" minOccurs="0"/>
       <xs:element name="Brand" type="T_NotNullString"/>
       <xs:element name="BestSeller" type="xs:boolean" minOccurs="0"/>
       <xs:element name="Clearance" type="xs:boolean" minOccurs="0"/>

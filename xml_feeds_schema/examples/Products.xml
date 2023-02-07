@@ -2,6 +2,7 @@
 <Products>
   <Product>
     <SKU>900002</SKU>
+    <IntrastatCommodityCode>630799989900000000Q300</IntrastatCommodityCode>
     <Brand>Generic</Brand>
     <CountryOfOrigin>CH</CountryOfOrigin>
     <QuantityPerCarton>40</QuantityPerCarton>
