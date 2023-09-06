@@ -4,10 +4,10 @@
   <xs:annotation>
     <xs:documentation>
       List of products and product variants.
-      If product is discontinued, but there are still some items available
+      If the product is discontinued, but there are still some items available
       set Clearance element to value "true".
-      If, on the other hand, product is discontinued and out of stock
-      remove it from XML file completely and it will be automatically deactivated.
+      If, on the other hand, the product is discontinued and out of stock
+      remove it from the XML file completely, and it will be automatically deactivated.
     </xs:documentation>
   </xs:annotation>
 
@@ -19,7 +19,7 @@
         <xs:annotation>
           <xs:documentation>
             Size for clothing items. Typically: L, XL, XXL, etc.
-            This element should contain only the size for the specific variant. E.g. XXL
+            This element should contain only the size for the specific variant. E.g. XXL.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -30,13 +30,13 @@
           <xs:documentation>
             URL to a picture of this variant without any imprints.
 
-            Description below applies to this element and to DecoImageURL as well:
+            The description below applies to this element and to DecoImageURL as well:
             If "ETag" is specified in HTTP response headers and it hasn't changed
-            since last sync the image download will be skipped (only headers will be fetched),
-            thus saving resources on supplier's server and speeding up the sync.
+            since the last sync, the image download will be skipped (only headers will be fetched),
+            thus saving resources on the supplier's server and speeding up the sync.
 
             The images will be used for Google shopping.
-            Therefore they should match the requirements specified in their documentation:
+            Therefore, they should match the requirements specified in their documentation:
             https://support.google.com/merchants/answer/6324350
           </xs:documentation>
         </xs:annotation>
@@ -116,14 +116,14 @@
                   <xs:element name="Express" type="xs:boolean" minOccurs="0">
                     <xs:annotation>
                       <xs:documentation>
-                        Should be set to "true" if this decoration can be printed and delivered faster than typical.
+                        It should be set to "true" if this decoration can be printed and delivered faster than typical.
                       </xs:documentation>
                     </xs:annotation>
                   </xs:element>
                   <xs:element name="ExpressSurcharge" minOccurs="0">
                     <xs:annotation>
                       <xs:documentation>
-                        Specify surcharge here in absolute amount.
+                        Specify the surcharge here in absolute amount.
                       </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -152,7 +152,7 @@
                           <xs:annotation>
                             <xs:documentation>
                               Use this if, for example, decoration type linked in DecoTypeID can be printed up to 4 colors,
-                              but on this specific variant you want to enforce a lower limit.
+                              but on this specific variant, you want to enforce a lower limit.
                             </xs:documentation>
                           </xs:annotation>
                         </xs:element>
@@ -208,7 +208,7 @@
                   <xs:annotation>
                     <xs:documentation>
                       This should contain an identifier string that refers to a decoration type
-                      described in the decoration XML file. (Schema: DecorationTypes.xsd)
+                      described in the decoration XML file. (Schema: DecorationTypesPricing.xsd)
                     </xs:documentation>
                   </xs:annotation>
                 </xs:attribute>
@@ -238,9 +238,9 @@
                   <xs:element name="QtyLowerBound" type="xs:positiveInteger">
                     <xs:annotation>
                       <xs:documentation>
-                        This is the inclusive ordered quantity from which the price in UnitNetPrice element applies.
-                        For example, if there are three ScalePrice elements with QtyLowerbound in {1, 100, 500}
-                        the one with 100 will be used if customer orders 150 items,
+                        This is the inclusive ordered quantity from which the price in the UnitNetPrice element applies.
+                        For example, if there are three ScalePrice elements with QtyLowerbound in {1, 100, 500},
+                        the one with 100 will be used if a customer orders 150 items,
                         as 150 is more than 100 and less than 500.
                       </xs:documentation>
                     </xs:annotation>
@@ -308,14 +308,14 @@
               <xs:annotation>
                 <xs:documentation>
                   Category title in human-readable format.
-                  Typically separated by slash symbol (/) for each level.
+                  Typically separated by a slash symbol (/) for each level.
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="Code" type="T_NotNullString">
               <xs:annotation>
                 <xs:documentation>
-                  Code is used to match supplier categories with internal ones at Allbranded.
+                  Code is used to match supplier categories with internal ones at allbranded.
                   It should never change.
                 </xs:documentation>
               </xs:annotation>
@@ -337,7 +337,7 @@
         <xs:annotation>
           <xs:documentation>
             If possible this field should contain the timestamp of when any attribute
-            of this product was last updated, including variants, images, prints, pricing.
+            of this product was last updated, including variants, images, prints, and pricing.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
