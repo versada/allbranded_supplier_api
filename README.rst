@@ -19,10 +19,28 @@ Please validate every XML file with XSD before providing the feed to us.
 Product Data
 ============
 
-:Version: 1.0
+:Version: 1.1
 
 - Schema - `xml_feeds_schema/schema/Products.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/Products.xsd>`_
 - Example - `xml_feeds_schema/examples/Products.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/Products.xml>`_
+
+Change log
+----------
+
+.. list-table::
+   :widths: 25 25 50 25
+   :header-rows: 1
+
+   * - Version
+     - Date
+     - Comments
+     - Authors
+   * - 1.1
+     - 2024-02-08
+     - Update "EANCode" type from :code:`T_NotNullString` to :code:`xs:string`
+     - Aleksander Milinkevich
+
+
 
 Decoration Types & Pricing Data
 ===============================
@@ -32,8 +50,8 @@ Decoration Types & Pricing Data
 - Schema - `xml_feeds_schema/schema/DecorationTypesPricing.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/DecorationTypesPricing.xsd>`_
 - Example - `xml_feeds_schema/examples/DecorationTypesPricing.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/DecorationTypesPricing.xml>`_
 
-Chang log
----------
+Change log
+----------
 
 .. list-table::
    :widths: 25 25 50 25
