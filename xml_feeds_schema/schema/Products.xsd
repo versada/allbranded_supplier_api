@@ -81,13 +81,7 @@
                     </xs:unique>
                   </xs:element>
 
-                  <xs:element name="HexCode" type="T_HexColor" minOccurs="0">
-                    <xs:annotation>
-                      <xs:documentation>
-                        If omitted we'll try to match your color name to our color palette and use a hexcode from there.
-                      </xs:documentation>
-                    </xs:annotation>
-                  </xs:element>
+                  <xs:element name="HexCode" type="T_HexColor"/>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>

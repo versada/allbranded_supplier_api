@@ -19,7 +19,7 @@ Please validate every XML file with XSD before providing the feed to us.
 Product Data
 ============
 
-:Version: 1.1
+:Version: 1.2
 
 - Schema - `xml_feeds_schema/schema/Products.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/Products.xsd>`_
 - Example - `xml_feeds_schema/examples/Products.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/Products.xml>`_
@@ -31,6 +31,14 @@ Change log
    :widths: 25 25 50 25
    :header-rows: 1
 
+   * - Version
+     - Date
+     - Comments
+     - Authors
+   * - 1.2
+     - 2024-05-08
+     - :code:`HexColor` should be mandatory
+     - Paulius Sladkevičius
    * - Version
      - Date
      - Comments
