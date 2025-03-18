@@ -19,7 +19,7 @@ Please validate every XML file with XSD before providing the feed to us.
 Product Data
 ============
 
-:Version: 1.1
+:Version: 1.2
 
 - Schema - `xml_feeds_schema/schema/Products.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/Products.xsd>`_
 - Example - `xml_feeds_schema/examples/Products.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/Products.xml>`_
@@ -35,6 +35,10 @@ Change log
      - Date
      - Comments
      - Authors
+   * - 1.2
+     - 2024-03-18
+     - Update "QuantityPerCarton" add :code:`minOccurs="0"` making this element optional
+     - Darius Martinkus
    * - 1.1
      - 2024-02-08
      - Update "EANCode" type from :code:`T_NotNullString` to :code:`xs:string`
