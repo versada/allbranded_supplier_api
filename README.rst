@@ -19,7 +19,7 @@ Please validate every XML file with XSD before providing the feed to us.
 Product Data
 ============
 
-:Version: 1.3
+:Version: 1.4
 
 - Schema - `xml_feeds_schema/schema/Products.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/Products.xsd>`_
 - Example - `xml_feeds_schema/examples/Products.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/Products.xml>`_
@@ -35,6 +35,10 @@ Change log
      - Date
      - Comments
      - Authors
+   * - 1.4
+     - 2025-04-01
+     - Add Product.xsd.
+     - Darius Martinkus
    * - 1.3
      - 2025-03-26
      - Update "WeightGR" type add :code:`type="xs:decimal"` making this element to accept decimal values.
