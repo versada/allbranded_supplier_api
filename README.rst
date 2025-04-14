@@ -5,8 +5,10 @@ allbranded supplier API
 :Authors:
     Tomas Račys,
     Paulius Sladkevičius
+    Darius Martinkus,
+    Ugnė Sinkevičienė
 
-:Version: 1.1 of 2023-09-06
+:Version: 1.5 of 2025-04-14
 
 To be able to import necessary information to allbranded systems, you should provide XML files based on XSD schemas.
 
@@ -19,10 +21,17 @@ Please validate every XML file with XSD before providing the feed to us.
 Product Data
 ============
 
-:Version: 1.4
+:Version: 1.5
+
+**Default Schema and Example**
 
 - Schema - `xml_feeds_schema/schema/Products.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/Products.xsd>`_
 - Example - `xml_feeds_schema/examples/Products.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/Products.xml>`_
+
+**Optional Schema**
+
+- Schema - `xml_feeds_schema/schema/ProductDecoTypesWithoutUnique.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/ProductDecoTypesWithoutUnique.xsd>`_
+- Example - `xml_feeds_schema/examples/ProductDecoTypesWithoutUnique.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/ProductDecoTypesWithoutUnique.xml>`_
 
 Change log
 ----------
@@ -35,6 +44,10 @@ Change log
      - Date
      - Comments
      - Authors
+   * - 1.5
+     - 2025-04-14
+     - Option to define the same Decoration Types (@DecoTypeID) either at the product level or per individual decoration. This includes the introduction of two new schemas—Product-Based Decoration and Decoration-Specific Configuration—with corresponding examples to illustrate each approach.
+     - Ugnė Sinkevičienė
    * - 1.4
      - 2025-04-01
      - Add Product.xsd.
@@ -57,10 +70,18 @@ Change log
 Decoration Types & Pricing Data
 ===============================
 
-:Version: 1.1
+:Version: 1.5
+
+**Default Schema and Example**
 
 - Schema - `xml_feeds_schema/schema/DecorationTypesPricing.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/DecorationTypesPricing.xsd>`_
 - Example - `xml_feeds_schema/examples/DecorationTypesPricing.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/DecorationTypesPricing.xml>`_
+
+**Optional Schema**
+
+- Schema - `xml_feeds_schema/schema/DecorationTypesPricingWithoutUnique.xsd <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/schema/DecorationTypesPricingWithoutUnique.xsd>`_
+- Example - `xml_feeds_schema/examples/DecorationTypesPricingWithoutUnique.xml <https://github.com/versada/allbranded_supplier_api/blob/14.0/xml_feeds_schema/examples/DecorationTypesPricingWithoutUnique.xml>`_
+
 
 Change log
 ----------

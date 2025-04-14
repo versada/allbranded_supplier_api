@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Products>
+  <Product>
+    <SKU>900002</SKU>
+    <IntrastatCommodityCode>630799989900000000Q300</IntrastatCommodityCode>
+    <Brand>Generic</Brand>
+    <CountryOfOrigin>CH</CountryOfOrigin>
+    <QuantityPerCarton>40</QuantityPerCarton>
+    <WeightGR>250</WeightGR>
+
+    <Dimensions>
+      <WidthCM>8</WidthCM>
+      <HeightCM>16</HeightCM>
+    </Dimensions>
+
+    <Translatable>
+      <Translation Lang="en">
+        <Title>Drinking Bottle</Title>
+        <Description>Single walled bottle with twist-on lid. Volume capacity is 350ml.</Description>
+        <Keywords>plastic bottle, drinking bottle, bottles, bottle</Keywords>
+        <Durability>12 months</Durability>
+        <Material>Plastic</Material>
+      </Translation>
+    </Translatable>
+
+    <Category>
+      <Title>Drinkware / Bottle</Title>
+      <Code>18 / 185</Code>
+    </Category>
+
+    <Variants>
+      <Variant>
+        <SKU>90002001</SKU>
+        <EANCode>8713159038611</EANCode>
+
+        <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
+        <PlainImageURL>http://...</PlainImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+
+        <Colors>
+          <!-- Base Color -->
+          <Color>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Red</Title>
+              </Translation>
+            </Translatable>
+            <HexCode>EF3340</HexCode>
+          </Color>
+
+          <!-- Lid Color -->
+          <Color>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Black</Title>
+              </Translation>
+            </Translatable>
+            <HexCode>2D2926</HexCode>
+          </Color>
+        </Colors>
+
+        <Prints>
+          <Print DecoTypeID="LASER">
+            <MinDecoQty>40</MinDecoQty>
+            <Express>true</Express>
+            <ExpressSurcharge Type="absolute">25.00</ExpressSurcharge>
+            <Position PositionID="FRONT">
+              <MaxNrOfColors>2</MaxNrOfColors>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+              </Translatable>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
+            </Position>
+          </Print>
+          <Print DecoTypeID="LASER">
+            <MinDecoQty>40</MinDecoQty>
+            <Express>false</Express>
+            <Position PositionID="BACK">
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Back</Title>
+                </Translation>
+              </Translatable>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+          </Print>
+          <Print DecoTypeID="DIGITAL">
+            <MinDecoQty>40</MinDecoQty>
+            <Express>false</Express>
+            <Position PositionID="FRONT">
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+              </Translatable>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
+            </Position>
+            <Position PositionID="BACK">
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Back</Title>
+                </Translation>
+              </Translatable>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
+            </Position>
+            <Position PositionID="LID">
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Lid</Title>
+                </Translation>
+              </Translatable>
+              <WidthMM>10</WidthMM>
+              <HeightMM>10</HeightMM>
+              <PrintImageURL>http://...</PrintImageURL>
+            </Position>
+          </Print>
+        </Prints>
+
+        <Pricing>
+          <Currency>EUR</Currency>
+          <ScalePrice>
+            <QtyLowerBound>1</QtyLowerBound>
+            <UnitNetPrice>1.99</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>50</QtyLowerBound>
+            <UnitNetPrice>1.95</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>250</QtyLowerBound>
+            <UnitNetPrice>1.90</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>500</QtyLowerBound>
+            <UnitNetPrice>1.89</UnitNetPrice>
+          </ScalePrice>
+        </Pricing>
+      </Variant>
+
+      <Variant>
+        <SKU>90002002</SKU>
+        <EANCode>8713159038612</EANCode>
+
+        <PlainImageURL>http://...</PlainImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+        <DecoImageURL>http://...</DecoImageURL>
+
+        <Colors>
+          <!-- Base Color -->
+          <Color>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Green</Title>
+              </Translation>
+            </Translatable>
+            <HexCode>44D62C</HexCode>
+          </Color>
+
+          <!-- Lid Color -->
+          <Color>
+            <Translatable>
+              <Translation Lang="en">
+                <Title>Black</Title>
+              </Translation>
+            </Translatable>
+            <HexCode>2D2926</HexCode>
+          </Color>
+        </Colors>
+
+        <Prints>
+          <Print DecoTypeID="LASER">
+            <MinDecoQty>40</MinDecoQty>
+            <Express>false</Express>
+            <Position PositionID="FRONT">
+              <MaxNrOfColors>2</MaxNrOfColors>
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+                <Translation Lang="de">
+                  <Title>Vonderseite</Title>
+                </Translation>
+              </Translatable>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+          </Print>
+          <Print DecoTypeID="DIGITAL">
+            <MinDecoQty>40</MinDecoQty>
+            <Express>false</Express>
+            <Position PositionID="FRONT">
+              <Translatable>
+                <Translation Lang="en">
+                  <Title>Front</Title>
+                </Translation>
+                <Translation Lang="de">
+                  <Title>Vonderseite</Title>
+                </Translation>
+              </Translatable>
+              <WidthMM>62</WidthMM>
+              <HeightMM>50</HeightMM>
+            </Position>
+          </Print>
+        </Prints>
+
+        <Pricing>
+          <Currency>EUR</Currency>
+          <ScalePrice>
+            <QtyLowerBound>1</QtyLowerBound>
+            <UnitNetPrice>1.99</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>50</QtyLowerBound>
+            <UnitNetPrice>1.95</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>250</QtyLowerBound>
+            <UnitNetPrice>1.90</UnitNetPrice>
+          </ScalePrice>
+          <ScalePrice>
+            <QtyLowerBound>500</QtyLowerBound>
+            <UnitNetPrice>1.89</UnitNetPrice>
+          </ScalePrice>
+        </Pricing>
+      </Variant>
+
+    </Variants>
+  </Product>
+</Products>
