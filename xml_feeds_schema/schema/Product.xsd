@@ -253,7 +253,7 @@
       <xs:element name="BestSeller" type="xs:boolean" minOccurs="0"/>
       <xs:element name="Clearance" type="xs:boolean" minOccurs="0"/>
       <xs:element name="CountryOfOrigin" type="T_ISO3166CountryCode"/>
-      <xs:element name="QuantityPerCarton" type="xs:positiveInteger" minOccurs="0"/>
+      <xs:element name="QuantityPerCarton" type="xs:positiveInteger"/>
 
       <xs:element name="WeightGR" type="xs:decimal" minOccurs="0"/>
       <xs:element name="Dimensions" minOccurs="0">
