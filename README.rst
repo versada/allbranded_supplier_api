@@ -8,7 +8,7 @@ allbranded supplier API
     Darius Martinkus,
     Ugnė Sinkevičienė
 
-:Version: 1.5 of 2026-03-12
+:Version: 1.6 of 2026-03-12
 
 To be able to import necessary information to allbranded systems, you should provide XML files based on XSD schemas.
 
