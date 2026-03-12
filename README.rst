@@ -8,7 +8,7 @@ allbranded supplier API
     Darius Martinkus,
     Ugnė Sinkevičienė
 
-:Version: 1.5 of 2025-04-14
+:Version: 1.5 of 2026-03-12
 
 To be able to import necessary information to allbranded systems, you should provide XML files based on XSD schemas.
 
@@ -21,7 +21,7 @@ Please validate every XML file with XSD before providing the feed to us.
 Product Data
 ============
 
-:Version: 1.5
+:Version: 1.6
 
 **Default Schema and Example**
 
@@ -40,6 +40,14 @@ Change log
    :widths: 25 25 50 25
    :header-rows: 1
 
+   * - Version
+     - Date
+     - Comments
+     - Authors
+   * - 1.6
+     - 2026-03-12
+     - Restore "QuantityPerCarton" as a required field, since it is expected to be provided from the code side as well.
+     - Ugnė Sinkevičienė
    * - Version
      - Date
      - Comments
