@@ -21,7 +21,7 @@ Please validate every XML file with XSD before providing the feed to us.
 Product Data
 ============
 
-:Version: 1.6
+:Version: 1.7
 
 **Default Schema and Example**
 
@@ -40,6 +40,14 @@ Change log
    :widths: 25 25 50 25
    :header-rows: 1
 
+   * - Version
+     - Date
+     - Comments
+     - Authors
+   * - 1.7
+     - 2026-04-09
+     - Set "PrintImageURL" as mandatory to guarantee that subvariants have images.
+     - Ugnė Sinkevičienė
    * - Version
      - Date
      - Comments
