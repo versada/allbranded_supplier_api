@@ -176,7 +176,7 @@
                         <xs:element name="WidthMM" type="xs:positiveInteger" minOccurs="0"/>
                         <xs:element name="HeightMM" type="xs:positiveInteger" minOccurs="0"/>
                         <xs:element name="DiameterMM" type="xs:positiveInteger" minOccurs="0"/>
-                        <xs:element name="PrintImageURL" type="T_NotNullString" minOccurs="1"/>
+                        <xs:element name="PrintImageURL" type="T_NotNullString" minOccurs="1">
                           <xs:annotation>
                             <xs:documentation>
                               URL to a picture that displays imprint area for this position.
